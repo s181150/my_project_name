@@ -3,10 +3,10 @@ parameters:
     database_host: 127.0.0.1
     database_port: null
     database_name: testowy
-    database_user: testowy
-    database_password: 12345
+    database_user: root
+    database_password: ~
     mailer_transport: smtp
-    mailer_host: 127.0.0.1
+    mailer_host: 127.0.0.
     mailer_user: null
     mailer_password: null
     secret: afe965be32a0a783e2cb5126f5f3104b905359c1
