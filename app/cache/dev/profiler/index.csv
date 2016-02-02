@@ -191,3 +191,10 @@ d2fb5c,127.0.0.1,GET,http://localhost:8000/app_dev.php/register/,1454372094,,200
 5916bb,127.0.0.1,GET,http://localhost:8000/app_dev.php/pb,1454423247,,301
 6501c6,127.0.0.1,GET,http://localhost:8000/app_dev.php/pb/,1454423248,,200
 cd5825,127.0.0.1,GET,http://localhost:8000/app_dev.php/pb/category,1454423251,,200
+1d0cc4,127.0.0.1,GET,http://localhost:8000/app_dev.php/pb/,1454426018,,200
+96b2f9,127.0.0.1,GET,http://localhost:8000/bundles/projekt/js/jquery.min.js,1454426020,ac0c76,200
+ac0c76,127.0.0.1,GET,http://localhost:8000/bundles/projekt/js/jquery.min.js,1454426020,,404
+b51f52,127.0.0.1,GET,http://localhost:8000/app_dev.php/pb/category,1454426022,,200
+375518,127.0.0.1,GET,http://localhost:8000/app_dev.php/pb/category/sub,1454426027,,200
+451b4a,127.0.0.1,GET,http://localhost:8000/bundles/projekt/js/jquery.min.js,1454426029,20998d,200
+20998d,127.0.0.1,GET,http://localhost:8000/bundles/projekt/js/jquery.min.js,1454426029,,404
