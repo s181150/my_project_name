@@ -1,0 +1,44 @@
+
+{% block logo %} 
+ <div class="jumbotron">
+    
+  <table>
+  
+    <tr>
+    
+  <td width="55%">
+      <center><h1>Potrzebujesz samochodu?</h1></center>
+  </td>
+  
+  <td>
+        <center><p><a class="btn btn-xlarge btn-success" href="{{path('fos_user_security_login')}}" role="button">Zaloguj się</a></p></center>
+  </td>
+    </tr>
+  </table>
+  
+      </div>
+
+ {% endblock %}
+    <div class="row">
+    <div class="row marketing">
+        <div class="col-lg-6">
+          <h1>Nasze samochody:</h1>
+          <p>Poniższe samochody dostępne są do Twojej dyspozycji!</p>
+    </div>
+  </div>
+            {% for car in cars %}
+    <div class = "col-sm-6 col-md-3">
+      <a href="{{ path('car_show', {'slug': car.slug}) }}" title="Zobacz więcej o: {{ car.name }}" class = "thumbnail">
+         <img src = "{{ asset('uploads/' ~ car.picture) }}" alt = "Generic placeholder thumbnail">
+      
+      <p>{{ car.name }}</p>
+          
+        </a> 
+          
+   </div>
+    {% endfor %}  
+   </div>
+
+
+
+
