@@ -1,0 +1,133 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  margin-top: 100px;
+  margin-bottom: 0px;
+}
+
+#nawigator {
+  padding-top: 0px;
+}
+.navbar {
+  position: fixed;
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  max-height: 90px;
+
+
+}
+
+.row p
+  {width: 50%;
+    text-align: justify;
+  }
+
+.footer .container  {
+
+  height: 100%;
+  width: 50%;
+  margin: 0px auto;
+  text-align: center
+}
+
+
+
+.footer .container .text-muted{
+
+  display: block;
+    margin: 0 auto;
+  height: 100%;
+  width: 100%;
+  text-align: center
+}
+
+footer {
+  display: block;
+}
+.jumbotron {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    color: inherit;
+    background-color: #eee;
+    background-image: url(../app/Resources/public/css/images/slider1wlasciwiwy.jpg);
+  
+}
+.jumbotron .h1,
+.jumbotron h1 {
+  width: 100%;
+  float: left;
+    color: #fff;
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.9);
+  font-family: Impact, Charcoal, sans-serif;
+  border-radius: 15px;
+  box-shadow: 0px 0px 0px 1px rgba(255,255,255,1);
+  background-image: url(../app/Resources/public/css/images/ksztalt.png)
+}
+}
+.jumbotron p {
+    margin-bottom: 15px;
+    font-size: 21px;
+    font-weight: 200
+}
+.jumbotron>hr {
+    border-top-color: #d5d5d5
+}
+
+.jumbotron li {
+  list-style-type: none;
+  color: #fff;
+  display: inline-block;
+}
+
+.container .jumbotron,
+.container-fluid .jumbotron {
+    padding-right: 15px;
+    padding-left: 15px;
+    border-radius: 6px
+}
+.jumbotron .container {
+    max-width: 100%
+}
+
+.table  {
+  border: 0px;
+}
+
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+body > .container {
+  padding: 0px 15px 0;
+}
+.container .text-muted {
+  margin: 20px 0;
+}
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+code {
+  font-size: 80%;
+}
+
+.form-signin {
+	width: 300px;
+	margin: 0px auto;
+}
+
+.fos_user_registration_register {
+	width: 600px;
+	margin: 0px auto;
+}
