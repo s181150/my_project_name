@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+
+    <h1>Kategorie samochodów</h1>
+      <br>
+    <div class="row">
+        {% for category in categories %}
+            <a class="btn btn-lg btn-success" href="{{ path('category_show', {'slug': category.slug}) }}"><b>{{ category.name }}</b></a>
+        {% endfor %}
+    </div>
+
+     {% include 'AppBundle:Car:list.html.twig' with {'cars': cars} %}
+
+    
+    <div class="row">
+        
+        <div class="col-md-6"><br>
+            <h3>Najczęściej wypożyczane</h3>
+            <ul>
+                {% for car in popular %}
+                    <li><b>{{ car.name }} </b>&nbsp;&nbsp;&nbsp; <span class="badge">{{ car.nbOrders }}</span><br/><br/></li>
+                {% endfor %}
+            </ul>
+        </div>
+        
+        <div class="col-md-6"><br>
+            <h3>Najczęściej recenzowane</h3>
+            <ul>
+                {% for car in frequentlyReviewed %}
+                    <li><b>{{ car.name }}&nbsp;&nbsp;&nbsp; </b><span class="badge"><b>{{ car.nbReviews }}</b></span><br/><br/></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    <br>
+<!--     <div class="row">
+    <h2>Lista dostępnych samochodów</h2>
+    
+   
+  
+</div> -->
+        
+{% endblock %}

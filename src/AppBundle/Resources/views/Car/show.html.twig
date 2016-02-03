@@ -1,0 +1,53 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}{{ car.name }}{% endblock %}
+
+{% block body %}
+
+<h1>{{ block('title') }}</h1>
+  
+<div class="row">
+    
+    <img class="pull-right" width=400 src="{{ asset('uploads/' ~ car.picture) }}" />
+    
+    {% for category in car.categories %}
+        <a class="btn btn-lg btn-success" href="{{ path('category_show', {'slug': category.slug}) }}">{{ category.name }}</a>
+    {% endfor %}
+  <br>  <br>
+    <h3>Cena <span class="label label-default">{{ car.price }} zł</span></h3>
+   <br>  
+    <h3>Opis</h3>
+    <p>{{ car.description }}</p>
+  
+  <br>
+    <h3>Model</h3>
+    <p>{{ car.model|raw }}</p>
+   <br>  
+    <a href="{{ path('car_rent', {'slug': car.slug}) }}" class="btn btn-info">Wypożycz</a>
+  
+
+  <br><br>
+  <center>  <h1>Recenzje {% if app.user %}<a href="{{ path('car_add_review', {'slug': car.slug}) }}" class=" pull-right btn btn-success">Dodaj recenzje</a>{% endif %}</h1></center></h1>
+    {% if not app.user %}
+        <p><a href="{{ path('fos_user_security_login') }}">Zaloguj się</a> by móc dodawać recenzje.</p>
+    {% endif %}
+    
+    <ul class="list-group">
+    {% for revision in car.approvedReviews %}
+        
+        <li class="list-group-item ">
+            <span class="pull-right">Dodana dnia: {{ revision.createdAt|date('Y-m-d H:i:s') }}</span>
+            <h4 class="list-group-item-heading">{{ revision.user }}</h4>
+            <p class="list-group-item-text">{{ revision.content }}</p>
+        </li>
+        
+    {% else %}
+    
+        <li class="list-group-item ">Ten Samochód nie posiada jeszcze żadnych recenzji</li>
+      
+    {% endfor %}
+    </ul>
+    
+</div>
+  
+{% endblock %}
